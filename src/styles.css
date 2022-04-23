@@ -15,15 +15,19 @@ textarea {
 }
 
 .meta {
-  height: 4em;
+  height: 5rem;
 }
 
 @media only screen and (max-width: 425px) {
   .meta {
-    height: 5em;
+    height: 6rem;
   }
 }
 
 li {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.75rem;
+}
+
+.breaker {
+  margin-bottom: 0.4rem;
 }

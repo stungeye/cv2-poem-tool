@@ -60,16 +60,25 @@ export default function App() {
           <Fragment>
             <strong>Missing: </strong>
             {missingWords().join(", ")}
-            <br />
+            <br className="breaker" />
           </Fragment>
         )}
-        {includedWords().length > 0 && (
+        {includedWords().length > 0 && includedWords().length !== 10 && (
           <Fragment>
-            <strong>Included: </strong>
+            <strong>Present: </strong>
             {includedWords().join(", ")}
           </Fragment>
         )}
+
+        {includedWords().length === 10 && (
+          <Fragment>
+            ✅ Your poem includes all the required words. Well done!
+            <br className="breaker" />
+            <em>Be sure to look over the other requirements below.</em>
+          </Fragment>
+        )}
       </p>
+
       <textarea onChange={inputChanged} value={text} />
 
       {missingWords().length > 0 ? (
@@ -80,9 +89,6 @@ export default function App() {
         </p>
       ) : (
         <Fragment>
-          <p>
-            Your poem includes all the required words. <em>Well done!</em>
-          </p>
           <p>
             <strong>Don't forget that:</strong>
           </p>
@@ -120,6 +126,7 @@ export default function App() {
               title. Stanza breaks DO NOT count as lines, nor do subheadings or
               the title.
             </li>
+            <li>Only one poem may be entered per participant.</li>
             <li>
               Racist, homophobic or defamatory writing will be disqualified.
             </li>

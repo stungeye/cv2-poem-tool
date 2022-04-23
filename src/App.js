@@ -79,9 +79,48 @@ export default function App() {
           {missingWords().length < 4 && <em>You're almost there!</em>}
         </p>
       ) : (
-        <p>
-          Your poem includes all the required words. <em>Well done!</em>
-        </p>
+        <Fragment>
+          <p>
+            Your poem includes all the required words. <em>Well done!</em>
+          </p>
+          <p>
+            <strong>Don't forget that:</strong>
+          </p>
+          <ul>
+            <li>
+              Each word must be used at least once in the body of the final
+              entry.
+            </li>
+            <li>
+              Words may be used in the title, but must also appear in the body
+              of the poem.
+            </li>
+            <li>
+              Each word must be spelled <em>exactly</em> as provided. Tense
+              changes, suffixes, plurals, etc. are not permitted, although caps
+              and lowercase uses are both permitted.
+            </li>
+            <li>The words may not be used as proper nouns.</li>
+            <li>
+              Each word must be used in proper context to qualify. If you are
+              unsure what a word means, look the word up in{" "}
+              <a href="https://www.merriam-webster.com/" target="_blank">
+                a dictionary
+              </a>
+              . If a word has multiple meanings you may decide which meaning to
+              use. If you use the word more than once in the poem, the meaning
+              of the word does not necessarily have to be the same.
+            </li>
+            <li>
+              Submitted poems may not exceed 48 lines of text not including the
+              title. Stanza breaks DO NOT count as lines, nor do subheadings or
+              the title.
+            </li>
+            <li>
+              Racist, homophobic or defamatory writing will be disqualified.
+            </li>
+          </ul>
+        </Fragment>
       )}
     </Fragment>
   );

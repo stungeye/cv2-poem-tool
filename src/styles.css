@@ -23,3 +23,7 @@ textarea {
     height: 5em;
   }
 }
+
+li {
+  margin-bottom: 0.75em;
+}

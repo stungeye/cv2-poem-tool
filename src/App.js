@@ -56,11 +56,19 @@ export default function App() {
   return (
     <Fragment>
       <p className="meta">
-        <strong>Missing: </strong>
-        {missingWords().join(", ")}
-        <br />
-        <strong>Included: </strong>
-        {includedWords().join(", ")}
+        {missingWords().length > 0 && (
+          <Fragment>
+            <strong>Missing: </strong>
+            {missingWords().join(", ")}
+            <br />
+          </Fragment>
+        )}
+        {includedWords().length > 0 && (
+          <Fragment>
+            <strong>Included: </strong>
+            {includedWords().join(", ")}
+          </Fragment>
+        )}
       </p>
       <textarea onChange={inputChanged} value={text} />
 

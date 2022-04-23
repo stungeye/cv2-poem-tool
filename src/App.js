@@ -72,7 +72,10 @@ export default function App() {
 
         {includedWords().length === 10 && (
           <Fragment>
-            ✅ Your poem includes all the required words. Well done!
+            <span role="img" aria-label="checkmark">
+              ✅
+            </span>{" "}
+            Your poem includes all the required words. Well done!
             <br className="breaker" />
             <em>Be sure to look over the other requirements below.</em>
           </Fragment>

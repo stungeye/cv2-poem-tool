@@ -104,7 +104,11 @@ export default function App() {
             <li>
               Each word must be used in proper context to qualify. If you are
               unsure what a word means, look the word up in{" "}
-              <a href="https://www.merriam-webster.com/" target="_blank">
+              <a
+                href="https://www.merriam-webster.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 a dictionary
               </a>
               . If a word has multiple meanings you may decide which meaning to

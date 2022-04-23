@@ -5,7 +5,6 @@ import "./styles.css";
 
 export default function App() {
   const [text, setText] = useState(serializedStorage.fetch());
-  const [boldWords, setBoldWords] = useState(true);
 
   const requiredWords = [
     "bog",

@@ -20,7 +20,8 @@ export default function App() {
   ];
 
   function foundWord(needle, haystack) {
-    return haystack.indexOf(needle) >= 0;
+    let re = new RegExp(`\\b${needle}\\b`, "gi");
+    return haystack.match(re) !== null;
   }
 
   function includedWords() {
@@ -55,10 +56,10 @@ export default function App() {
   return (
     <Fragment>
       <p className="meta">
-        <strong>Missing Words: </strong>
+        <strong>Missing: </strong>
         {missingWords().join(", ")}
         <br />
-        <strong>Included Words: </strong>
+        <strong>Included: </strong>
         {includedWords().join(", ")}
       </p>
       <textarea onChange={inputChanged} value={text} />

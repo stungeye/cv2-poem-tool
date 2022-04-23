@@ -1,0 +1,15 @@
+/* FOUC fix when paired with the CSS in the index.html style tag. */
+html {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.poem {
+  white-space: pre-wrap;
+}
+
+textarea {
+  width: 100%;
+  height: 500px;
+}
